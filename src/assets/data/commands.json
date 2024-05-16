@@ -1,0 +1,13 @@
+{
+  "ls": "To list all the commands",
+  "help": "This is a help message",
+  "skills": "To list all the skills",
+  "projects": "To list all the projects",
+  "experience": "To list all the experiences",
+  "education": "To list all the educations",
+  "about": "To get my about",
+  "contact": "To get my contact information",
+  "clear": "To clear the console",
+  "cls": "To clear the console",
+  "exit": "To exit the console"
+}
