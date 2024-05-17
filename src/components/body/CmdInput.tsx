@@ -34,16 +34,6 @@ const CmdInput = ({ inputRef, scrollFn }: CmdInputProps) => {
       setCmdList(newCmdList);
     }
   };
-
-  const extractCommandText = (liElement: JSX.Element): string => {
-    const userCommandDiv = liElement.props.children[0];
-      const commandText = userCommandDiv.props.children
-      .filter((child: any) => typeof child === 'object' && child.type === 'p')
-      .map((pElement: any) => pElement.props.children)
-      .join(" ");
-  
-    return commandText;
-  };
   
   const handleUpKeyPress = () => {
     const history = Ctx.history.STOREDLI;
