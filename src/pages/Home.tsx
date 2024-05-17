@@ -40,7 +40,7 @@ const Home = () => {
   };
 
   return (
-    <div className="w-screen h-screen bg-color2  font-trLarabie">
+    <div className="w-screen h-screen bg-black  font-trLarabie">
       {Ctx.isNew ? (
         <div className="w-screen h-screen flex justify-center items-center">
           <div className=" max-w-[30rem] max-h-[12rem] w-[96vw] h-auto bg-black  rounded-1xl terminal-Container border-[0.1rem] border-black fixed text-white p-4 flex flex-col gap-3 justify-center items-center">
