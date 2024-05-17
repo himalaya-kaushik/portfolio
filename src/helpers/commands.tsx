@@ -97,7 +97,7 @@ const AboutCommand = () => {
 
       <span>
         <p>
-          👋 Hello World! I'm Himalaya Kaushik, a passionate Full Stack
+          Hey! I'm Himalaya Kaushik, a passionate Full Stack
           Developer with expertise in:
         </p>
       </span>
@@ -109,7 +109,7 @@ const AboutCommand = () => {
           <p>📱 Ventured into App Development with Kotlin for a short while.</p>
         </li>
         <li>
-          <p>Recently learned GoLang to broaden my skill set.</p>
+          <p>💻 Currently well versed in MEAN/MERN stack web development</p>
         </li>
       </ul>
       <span className="mt-3 mb-1">
@@ -247,7 +247,9 @@ const SkillsCommand = () => {
           <ul className="list-disc pl-4">
             <li>Node.js</li>
             <li>Express</li>
-            <li>MongoDB</li>= <li>AWS</li>
+            <li>AWS</li>
+            <li>SQL</li>
+            <li>MongoDB</li>
             <li>NEXT.js</li>
             <li>Django</li>
             <li>Firebase</li>
@@ -357,6 +359,17 @@ const ExperienceCommand = () => {
           Used Models for TB classification for 2nd part of internship.
         </p>
         <p className="text-gray-400">From: January 2022 - May 2022</p>
+      </div>
+
+      <div className="p-6 rounded-lg shadow-md mb-8">
+        <h3 className="text-xl font-bold mb-2">EnR Consultancy</h3>
+        <p className="mb-2">Junior Developer</p>
+        <p className="mb-2">
+          Created Automatic liscense software detection and auto parking ticket generation.
+          Cretaed a ML model that detects fractures in marble for fault detection
+          Cretaed an app for detecting dyslexia in young children.
+        </p>
+        <p className="text-gray-400">From: March 2021 - August 2021</p>
       </div>
     </div>
   );
