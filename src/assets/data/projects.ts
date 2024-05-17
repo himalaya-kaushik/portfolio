@@ -40,7 +40,6 @@ const Projects = [
       { name: "C#" },
       { name: "Javascript" },
       { name: "TSQL" },
-      { name: "Multithreading" },
       { name: "Angular" },
     ],
   },
@@ -56,6 +55,22 @@ const Projects = [
       { name: "Python" },
       { name: "Streamlit" },
       { name: "Scikit-learn" },
+      { name: "Jupyter Notebook" },
+    ],
+  },
+  {
+    name: "Image Captioning",
+    description:
+      "Get a auto generated caption for you image using CNN-RNN model",
+    id: "image-captioning",
+    githubLink: "https://github.com/himalaya-kaushik/Image-Captioning-using-DL",
+    type: "movie-app",
+    isWebsite: true,
+    technologies: [
+      { name: "Python" },
+      { name: "Streamlit" },
+      { name: "Scikit-learn" },
+      { name: "Tensorflow" },
       { name: "Jupyter Notebook" },
     ],
   }
