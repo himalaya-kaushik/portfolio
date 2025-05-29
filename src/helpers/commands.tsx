@@ -97,19 +97,19 @@ const AboutCommand = () => {
 
       <span>
         <p>
-          Hey! I'm Himalaya Kaushik, a passionate Full Stack
-          Developer with expertise in:
+          Hey! I'm Himalaya Kaushik, a passionate Full Stack Developer with
+          expertise in:
         </p>
       </span>
       <ul className="list-disc list-outside pl-4">
         <li>
-          <p>🚀 Explored AI/ML as my starting point.</p>
+          <p> AI/ML from research to application.</p>
         </li>
         <li>
           <p>📱 Ventured into App Development with Kotlin for a short while.</p>
         </li>
         <li>
-          <p>💻 Currently well versed in MEAN/MERN stack web development</p>
+          <p>💻 Well versed in full stack web development</p>
         </li>
       </ul>
       <span className="mt-3 mb-1">
@@ -293,6 +293,14 @@ const EducationCommand = () => {
       <h2 className="text-2xl font-bold mb-4">Education:</h2>
 
       <EducationCard
+        degree="Master (CSE)"
+        institution="IIT Kanpur"
+        location="Kanpur"
+        grade="9.25 GPA"
+        year="2024-2026"
+      />
+
+      <EducationCard
         degree="BTech (CSE)"
         institution="UPES"
         location="Dehradun"
@@ -331,7 +339,10 @@ const ExperienceCommand = () => {
         <p className="mb-2">
           Part of team INZE, a complete inventory management tool that overlooks
           the inventory movement right from contract creation till delivery of
-          inventory.
+          inventory. Built TrackIt, an end-to-end shipment tracking platform
+          facilitating real-time logistics visibility and traceability from
+          manufacturing origin to seller destination, resulting in a 25%
+          reduction in delivery SLA breaches
         </p>
         <p className="text-gray-400">From: October 2023 - Present</p>
       </div>
@@ -365,9 +376,10 @@ const ExperienceCommand = () => {
         <h3 className="text-xl font-bold mb-2">EnR Consultancy</h3>
         <p className="mb-2">Junior Developer</p>
         <p className="mb-2">
-          Created Automatic liscense software detection and auto parking ticket generation.
-          Cretaed a ML model that detects fractures in marble for fault detection
-          Cretaed an app for detecting dyslexia in young children.
+          Created Automatic liscense software detection and auto parking ticket
+          generation. Cretaed a ML model that detects fractures in marble for
+          fault detection Cretaed an app for detecting dyslexia in young
+          children.
         </p>
         <p className="text-gray-400">From: March 2021 - August 2021</p>
       </div>

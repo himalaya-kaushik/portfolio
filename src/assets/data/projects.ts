@@ -1,6 +1,6 @@
 const Projects = [
   {
-    name: "Desitnation Digest",
+    name: "Destination Digest",
     description:
       "Get to know all travel advisiory and weather updates for you destination on you mail",
     id: "destination-digest",
