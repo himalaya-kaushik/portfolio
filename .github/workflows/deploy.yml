@@ -40,13 +40,12 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: production-files-2
+          name: production-files
           path: ./dist
 
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
-          name: deploy
           github_token: ${{ secrets.TOKEN }}
           publish_dir: ./dist
