@@ -47,11 +47,11 @@ const Head: React.FC<HeadProps> = ({ onMouseDown, onMouseMove, onMouseUp }) => {
         />
       </ul>
       <Link
-        to={"https://drive.google.com/file/d/1MfC7rbHjWOVkfiftZk9RstwHoo9gUstl/view?usp=drive_link"}
+        to={"https://drive.google.com/file/d/1n0cLalRZjv_eXjT1DOtjgcXanLy8HONN/view?usp=sharing"}
         hrefLang="_blank"
         className="text-commandResult font-semibold text-sm"
       >
-        Go to Website
+        Go to Resume
       </Link>
     </div>
   );

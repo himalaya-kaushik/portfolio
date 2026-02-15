@@ -1,5 +1,6 @@
 import CommandData from "../assets/data/commands.json";
 import Projects from "../assets/data/projects";
+import Research from "../assets/data/Research";
 import CommandDetails from "../assets/data/commands.json";
 
 const arrow = ">";
@@ -30,6 +31,8 @@ const CheckCommandAndExecute = (command: string) => {
     return EducationCommand();
   } else if (command === "experience") {
     return ExperienceCommand();
+  } else if (command === "research") {
+    return ResearchCommand();
   } else {
     return (
       <li className="flex flex-col gap-2 my-2">
@@ -83,6 +86,11 @@ const HelpCommand = () => {
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
+        <p className="text-commandResult">research - </p>
+        <p>{CommandDetails["research"]}</p>
+      </span>
+      <span className="text-white flex gap-2">
+        <p>-{arrow}</p>
         <p className="text-commandResult">clear - </p>
         <p>{CommandDetails["clear"]}</p>
       </span>
@@ -97,21 +105,39 @@ const AboutCommand = () => {
 
       <span>
         <p>
-          Hey! I'm Himalaya Kaushik, a passionate Full Stack Developer with
-          expertise in:
+          Hey! I'm Himalaya Kaushik — a Software Engineer and Researcher currently
+          pursuing my Master’s in Computer Science at IIT Kanpur. I work at the
+          intersection of AI research and scalable systems.
         </p>
       </span>
-      <ul className="list-disc list-outside pl-4">
+
+      <ul className="list-disc list-outside pl-4 space-y-2">
         <li>
-          <p> AI/ML from research to application.</p>
+          <p>
+            🤖 Researching Machine Unlearning, NLP, and Large Language Models —
+            from theory to real-world deployment.
+          </p>
         </li>
         <li>
-          <p>📱 Ventured into App Development with Kotlin for a short while.</p>
+          <p>
+            🧠 Building and optimizing LLM-powered systems, generative AI pipelines,
+            and multi-agent architectures.
+          </p>
         </li>
         <li>
-          <p>💻 Well versed in full stack web development</p>
+          <p>
+            ⚙️ Designing scalable backend systems and full-stack applications that
+            translate complex ideas into impactful products.
+          </p>
+        </li>
+        <li>
+          <p>
+            📊 Experimenting with predictive analytics and AI-driven automation to
+            solve high-impact problems.
+          </p>
         </li>
       </ul>
+
       <span className="mt-3 mb-1">
         <p>
           I'm always eager to embrace new technologies and integrate them into
@@ -166,6 +192,19 @@ const ContactCommand = () => {
           </a>
         </p>
       </li>
+      <li>
+        <p>
+          X(Twitter):{" "}
+          <a
+            href="https://x.com/Himalay_Kaushik"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-extralight"
+          >
+            @Himalay_Kaushik
+          </a>
+        </p>
+      </li>
       <li className="list-none mt-1 font-normal">
         👆 Click on any to contact me!{" "}
       </li>
@@ -178,7 +217,7 @@ const ProjectsCommand = () => {
     <ul className="flex flex-col gap-2 mt-6">
       <h2 className="text-2xl font-bold mb-4">Projects:</h2>
 
-      {Projects.reverse().map((project, index: number) => (
+      {Projects.map((project, index: number) => (
         <li
           className="p-6 rounded-lg shadow-md mb-6"
           key={"project" + index + project.name}
@@ -215,46 +254,90 @@ const ProjectsCommand = () => {
 
 const SkillsCommand = () => {
   return (
-    <div className="container mx-auto p-8 text-commandResult ">
-      <h2 className="text-2xl font-bold mb-4">Skills:</h2>
+    <div className="container mx-auto p-8 text-commandResult">
+      <h2 className="text-2xl font-bold mb-6">Skills:</h2>
 
-      <div className="flex flex-wrap gap-10">
+      <div className="flex flex-wrap gap-12">
+
+        {/* Languages */}
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-4">Languages:</h2>
-          <ul className="list-disc pl-4">
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>Java</li>
-            <li>C/C++</li>
-            <li>C#</li>
+          <h3 className="text-xl font-bold mb-3">Languages:</h3>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>C / C++</li>
             <li>Python</li>
+            <li>JavaScript</li>
+            <li>Triton</li>
+            <li>Golang (Beginner)</li>
+            <li>Solidity (Beginner)</li>
           </ul>
         </div>
 
+        {/* Web Technologies */}
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-4">Frontend:</h2>
-          <ul className="list-disc pl-4">
-            <li>HTML/CSS</li>
-            <li>Tailwind CSS</li>
+          <h3 className="text-xl font-bold mb-3">Web Technologies:</h3>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>FastAPI</li>
+            <li>REST APIs</li>
             <li>React</li>
             <li>Angular</li>
-            <li>Next.js</li>
+            <li>Tailwind CSS</li>
+            <li>Firebase</li>
+            <li>Redis</li>
+            <li>Kafka</li>
           </ul>
         </div>
 
+        {/* AI / ML */}
         <div className="mb-8">
-          <h2 className="text-xl font-bold mb-4">Backend:</h2>
-          <ul className="list-disc pl-4">
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>AWS</li>
-            <li>SQL</li>
-            <li>MongoDB</li>
-            <li>NEXT.js</li>
-            <li>Django</li>
-            <li>Firebase</li>
+          <h3 className="text-xl font-bold mb-3">AI / ML:</h3>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>PyTorch</li>
+            <li>TensorFlow</li>
+            <li>Scikit-Learn</li>
+            <li>LangChain</li>
+            <li>LangGraph</li>
+            <li>SageMaker</li>
+            <li>MLflow</li>
+            <li>Hadoop</li>
           </ul>
         </div>
+
+        {/* Databases */}
+        <div className="mb-8">
+          <h3 className="text-xl font-bold mb-3">Databases:</h3>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+            <li>ChromaDB (Vector Databases)</li>
+            <li>Elasticsearch</li>
+          </ul>
+        </div>
+
+        {/* DevOps */}
+        <div className="mb-8">
+          <h3 className="text-xl font-bold mb-3">DevOps:</h3>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>Git</li>
+            <li>Docker</li>
+            <li>AWS</li>
+            <li>CI/CD</li>
+            <li>Jenkins</li>
+          </ul>
+        </div>
+
+        {/* Other */}
+        <div className="mb-8">
+          <h3 className="text-xl font-bold mb-3">Other:</h3>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>Bash Scripting</li>
+            <li>YAML</li>
+            <li>LaTeX</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   );
@@ -296,7 +379,7 @@ const EducationCommand = () => {
         degree="Master (CSE)"
         institution="IIT Kanpur"
         location="Kanpur"
-        grade="9.25 GPA"
+        grade="9.43 GPA"
         year="2024-2026"
       />
 
@@ -334,55 +417,146 @@ const ExperienceCommand = () => {
 
       {/* Experience 1 */}
       <div className="p-6 rounded-lg shadow-md mb-8">
+        <h3 className="text-xl font-bold mb-2">NyaySetu AI</h3>
+        <p className="mb-2">Founding Backend and AI engineer</p>
+        <ul className="mb-2 list-disc pl-5">
+          <li>
+            Built a legal-tech platform enabling lawyer-client appointments and
+            automating case document processing with AI.
+          </li>
+          <li>
+            Architected scalable infrastructure with optimized database schemas,
+            high-throughput APIs, and modular frontend.
+          </li>
+          <li>
+            Developed real-time communication using Firebase WebSockets, Agora
+            SDK, and an agentic RAG chatbot for legal text navigation.
+          </li>
+        </ul>
+        <p className="text-gray-400">From: January 2025 - October 2025</p>
+      </div>
+
+      {/* Experience  2 */}
+      <div className="p-6 rounded-lg shadow-md mb-8">
         <h3 className="text-xl font-bold mb-2">Zetwerk</h3>
         <p className="mb-2">Full Stack Web Developer</p>
-        <p className="mb-2">
-          Part of team INZE, a complete inventory management tool that overlooks
-          the inventory movement right from contract creation till delivery of
-          inventory. Built TrackIt, an end-to-end shipment tracking platform
-          facilitating real-time logistics visibility and traceability from
-          manufacturing origin to seller destination, resulting in a 25%
-          reduction in delivery SLA breaches
-        </p>
-        <p className="text-gray-400">From: October 2023 - Present</p>
+        <ul className="mb-2 list-disc pl-5">
+          <li>
+            Built TrackIt, an end-to-end shipment tracking platform, cutting
+            delivery SLA breaches by 25%.
+          </li>
+          <li>
+            Developed core INZE warehouse modules (flows, reconciliation,
+            cross-dock optimization).
+          </li>
+          <li>
+            Automated Order Management System (reducing manual effort by 40%)
+            across procurement-to-delivery.
+          </li>
+          <li>
+            Integrated multi-channel payments & process automation, streamlining
+            order lifecycle.
+          </li>
+        </ul>
+        <p className="text-gray-400">From: October 2023 - July 2024</p>
       </div>
 
       {/* Experience 2 */}
       <div className="p-6 rounded-lg shadow-md mb-8">
         <h3 className="text-xl font-bold mb-2">Kongsberg Digital</h3>
         <p className="mb-2">Full Stack Web Developer</p>
-        <p className="mb-2">
-          I am a part of Kognitwin team (Kognitwin : A Digital Twin) focusing
-          mainly on digitizing oil and gas assets and further enabling remote
-          operations. Creating workflows which provide a virtual interface
-          integrated with realtime data, providing visualization and easy
-          simulation of assets, leading to an enormous costreduction and deep
-          insight to individual assets using MEAN stack
-        </p>
+        <ul className="mb-2 list-disc pl-5">
+          <li>
+            Part of Kognitwin team (Kognitwin : A Digital Twin) focusing mainly
+            on digitizing oil and gas assets and enabling remote operations.
+          </li>
+          <li>
+            Created event-driven workflows providing a virtual interface
+            integrated with realtime data, visualization and asset simulation, leading to cost-reduction and deep insight with anomaly detection.
+          </li>
+          <li>
+            Designed predictive CO2 dashboard using Prophet & ARIMAX, supporting
+            proactive monitoring and ESG reporting.
+          </li>
+        </ul>
         <p className="text-gray-400">From: August 2022 - September 2023</p>
       </div>
 
       <div className="p-6 rounded-lg shadow-md mb-8">
         <h3 className="text-xl font-bold mb-2">Express Diagnostic</h3>
         <p className="mb-2">ML intern</p>
-        <p className="mb-2">
-          Created Image segmentation model for TB detection on subjectreports
-          Used Models for TB classification for 2nd part of internship.
-        </p>
+        <ul className="mb-2 list-disc pl-5">
+          <li>
+            Built a multimodal image segmentation model combining chest X-ray
+            images and patient reports for tuberculosis detection.
+          </li>
+          <li>
+            Developed preprocessing, training, and evaluation pipelines to
+            segment TB-affected regions accurately.
+          </li>
+          <li>
+            Improved model performance and interpretability to support faster,
+            more reliable screening.
+          </li>
+        </ul>
         <p className="text-gray-400">From: January 2022 - May 2022</p>
       </div>
 
       <div className="p-6 rounded-lg shadow-md mb-8">
         <h3 className="text-xl font-bold mb-2">EnR Consultancy</h3>
         <p className="mb-2">Junior Developer</p>
-        <p className="mb-2">
-          Created Automatic liscense software detection and auto parking ticket
-          generation. Cretaed a ML model that detects fractures in marble for
-          fault detection Cretaed an app for detecting dyslexia in young
-          children.
-        </p>
+        <ul className="mb-2 list-disc pl-5">
+          <li>
+            Created Automatic license software detection and auto parking ticket
+            generation.
+          </li>
+          <li>
+             Created a ML model that detects fractures in marble for fault
+            detection.
+          </li>
+          <li>
+             Created an app for detecting dyslexia in young children.
+          </li>
+        </ul>
         <p className="text-gray-400">From: March 2021 - August 2021</p>
       </div>
+    </div>
+  );
+};
+
+const ResearchCommand = () => {
+  return (
+    <div className="container mx-auto p-8 text-commandResult">
+      <h2 className="text-2xl font-bold mb-4">Research Work:</h2>
+
+      {Research.map((item, index: number) => (
+        <div
+          className="p-6 rounded-lg shadow-md mb-8"
+          key={"research" + index + item.id}
+        >
+          <h3 className="text-xl font-bold mb-2">{item.name}</h3>
+          <p className="mb-1 text-gray-400">
+            {item.duration} · Mentor: {item.mentor}
+          </p>
+          <ul className="mb-3 list-disc pl-5">
+            {item.details.map((detail: string, i: number) => (
+              <li key={"detail" + index + i}>{detail}</li>
+            ))}
+          </ul>
+          <div className="flex flex-wrap gap-2">
+            {item.technologies.map(
+              (tech: { name: string }, i: number) => (
+                <span
+                  key={"researchTech" + index + i + tech.name}
+                  className="px-2 py-1 rounded text-commandResult"
+                >
+                  {tech.name}
+                </span>
+              )
+            )}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

@@ -34,8 +34,8 @@ const Home = () => {
     if (cmd === "y") {
       Ctx.setIsNew(false);
     } else if (cmd === "n") {
-      alert("You are Redirecting to my Resume");
-      window.location.href = "https://drive.google.com/file/d/1MfC7rbHjWOVkfiftZk9RstwHoo9gUstl/view?usp=drive_link";
+      alert("Wait...You are being redirected to my Resume.");
+      window.location.href = "https://drive.google.com/file/d/1n0cLalRZjv_eXjT1DOtjgcXanLy8HONN/view?usp=sharing";
     }
   };
 
