@@ -7,6 +7,7 @@ const commands = [
   "skills",
   "education",
   "experience",
+  "research",
   "clear",
 ];
 
